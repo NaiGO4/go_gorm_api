@@ -27,7 +27,7 @@ func main() {
 	// Rutas de las tareas
 	r.HandleFunc("/tasks", routes.GetTasksHandler).Methods("GET")
 	r.HandleFunc("/task/{id}", routes.GetTaskHandler).Methods("GET")
-	r.HandleFunc("/tasks", routes.PostTasksHandler).Methods("POST")
+	r.HandleFunc("/tasks", routes.CreateTasksHandler).Methods("POST")
 	r.HandleFunc("/tasks/{id}", routes.DeleteTasksHandler).Methods("DELETE")
 
 	http.ListenAndServe(":3030", r)

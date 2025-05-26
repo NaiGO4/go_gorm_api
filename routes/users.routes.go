@@ -27,6 +27,8 @@ func GetUserHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	db.DB.Model(&user).Association("Task").Find(&user.Tasks)
+
 	json.NewEncoder(w).Encode(&user)
 }
 
