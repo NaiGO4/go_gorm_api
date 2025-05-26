@@ -5,5 +5,5 @@ import (
 )
 
 func HomeHandler(w http.ResponseWriter, r *http.Request) {
-	w.Write([]byte("Hola"))
+	w.Write([]byte("Hola con mi API REST con GORM y Go!"))
 }
